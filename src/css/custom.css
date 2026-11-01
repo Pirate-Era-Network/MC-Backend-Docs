@@ -1,0 +1,162 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Shared Pirate Era docs palette. Pale pink pages, raspberry accent, dark gray text. */
+:root {
+    --ifm-color-primary: #b4235a;
+    --ifm-color-primary-dark: #a21f51;
+    --ifm-color-primary-darker: #991d4c;
+    --ifm-color-primary-darkest: #7e1840;
+    --ifm-color-primary-light: #bc396b;
+    --ifm-color-primary-lighter: #c04573;
+    --ifm-color-primary-lightest: #cc5d87;
+    --ifm-background-color: #fff1f5;
+    --ifm-background-surface-color: #fff7f9;
+    --ifm-font-color-base: #3f3c40;
+    --ifm-font-color-secondary: #5c565b;
+    --ifm-heading-color: #2c292b;
+    --ifm-color-content: #3f3c40;
+    --ifm-color-content-secondary: #5c565b;
+    --ifm-navbar-background-color: #f7c5d6;
+    --ifm-navbar-link-color: #3f3c40;
+    --ifm-navbar-link-hover-color: #b4235a;
+    --ifm-footer-background-color: #f7c5d6;
+    --ifm-footer-color: #3f3c40;
+    --ifm-footer-link-color: #3f3c40;
+    --ifm-footer-title-color: #b4235a;
+    --ifm-footer-link-hover-color: #b4235a;
+    --ifm-menu-color: #3f3c40;
+    --ifm-menu-color-active: #b4235a;
+    --ifm-menu-color-background-active: #fde3ec;
+    --ifm-menu-color-background-hover: #fdeef3;
+    --ifm-toc-link-color: #5c565b;
+    --ifm-breadcrumb-color-active: #b4235a;
+    --ifm-hr-border-color: #f0c2d0;
+    --docusaurus-highlighted-code-line-bg: rgba(180, 35, 90, 0.08);
+}
+
+.navbar {
+    border-bottom: 1px solid #f0a9c0;
+    box-shadow: none;
+}
+
+.navbar__title,
+.navbar__link {
+    color: var(--ifm-navbar-link-color);
+}
+
+.footer {
+    --ifm-footer-background-color: #f7c5d6;
+    --ifm-footer-color: #3f3c40;
+    --ifm-footer-link-color: #3f3c40;
+    --ifm-footer-title-color: #b4235a;
+    --ifm-footer-link-hover-color: #b4235a;
+    border-top: 1px solid #f0a9c0;
+}
+
+.footer__title {
+    color: var(--ifm-footer-title-color);
+}
+
+.footer__link-item,
+.footer__copyright {
+    color: var(--ifm-footer-color);
+}
+
+.footer__link-item:hover {
+    color: var(--ifm-footer-link-hover-color);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+    --ifm-color-primary: #f3a8c4;
+    --ifm-color-primary-dark: #ee8eb4;
+    --ifm-color-primary-darker: #ec84ae;
+    --ifm-color-primary-darkest: #e56097;
+    --ifm-color-primary-light: #f6b8d0;
+    --ifm-color-primary-lighter: #f7c2d6;
+    --ifm-color-primary-lightest: #fbe0ec;
+    --ifm-background-color: #2a1820;
+    --ifm-background-surface-color: #3a222c;
+    --ifm-font-color-base: #e6e1e4;
+    --ifm-font-color-secondary: #cbbfc6;
+    --ifm-heading-color: #f6eef2;
+    --ifm-color-content: #e6e1e4;
+    --ifm-color-content-secondary: #cbbfc6;
+    --ifm-navbar-background-color: #3a222c;
+    --ifm-navbar-link-color: #f6eef2;
+    --ifm-navbar-link-hover-color: #f3a8c4;
+    --ifm-footer-background-color: #3a222c;
+    --ifm-footer-color: #e6e1e4;
+    --ifm-footer-link-color: #e6e1e4;
+    --ifm-footer-title-color: #f3a8c4;
+    --ifm-footer-link-hover-color: #f3a8c4;
+    --ifm-menu-color: #e6e1e4;
+    --ifm-menu-color-active: #f3a8c4;
+    --ifm-menu-color-background-active: #4a2c38;
+    --ifm-menu-color-background-hover: #452833;
+    --ifm-toc-link-color: #cbbfc6;
+    --ifm-hr-border-color: #5a3846;
+    --docusaurus-highlighted-code-line-bg: rgba(243, 168, 196, 0.14);
+}
+
+[data-theme="dark"] .navbar {
+    border-bottom-color: #5a3846;
+}
+
+[data-theme="dark"] .footer {
+    --ifm-footer-background-color: #3a222c;
+    --ifm-footer-color: #e6e1e4;
+    --ifm-footer-link-color: #e6e1e4;
+    --ifm-footer-title-color: #f3a8c4;
+    --ifm-footer-link-hover-color: #f3a8c4;
+    border-top-color: #5a3846;
+}
+
+[data-theme="dark"] .DocSearch {
+    --docsearch-hit-background: var(--ifm-menu-color-background-active) !important;
+    --docsearch-hit-active-color: var(--ifm-color-primary) !important;
+    --docsearch-hit-color: var(--ifm-font-color-base) !important;
+}
+
+[data-theme="dark"] .DocSearch-Hit[aria-selected=true] a {
+    background-color: var(--ifm-menu-color-background-active) !important;
+}
+
+td {
+    padding: 0 16px 0 0;
+}
+
+.entrybox {
+    border-radius: 8px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.entryboxHeader {
+    border-radius: 8px 8px 0 0;
+    background-color: var(--ifm-background-surface-color);
+    padding: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--ifm-color-primary);
+}
+
+.entryboxBody {
+    padding: 8px;
+}
+
+.entryboxBody td {
+    padding: 0 16px 0 0;
+}
+
+.docsTitle {
+    color: var(--ifm-color-primary);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
