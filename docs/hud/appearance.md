@@ -4,9 +4,9 @@ sidebar_position: 3
 
 # Appearance
 
-One script, `hud_appearance`. You name short keys (`hp`, `hotbar`) and point them at pack font ids. Parts then use the short key.
+Pack fonts have long ids such as `pehud_scaled_fontpack:pehud_hp`. This script is the nickname list for the whole pack. Add a line when a new font exists, when the empty-bar letter changes, or when a big wallet number should shorten to `1k`. Parts then write `font: hp`.
 
-Quote any value that contains `:`. An unquoted colon is a nested map, and the font id never arrives.
+The id contains a colon, and YAML treats a bare colon as "the next thing is nested under this key," so the name has to be in quotes or the part never receives it.
 
 ```yaml
 hud_appearance:

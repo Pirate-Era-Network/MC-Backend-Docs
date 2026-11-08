@@ -5,11 +5,7 @@ slug: /hud
 
 # HUD
 
-A layout is a `hud_` script. It lists the parts that sit on the actionbar, in order. A part is a `hudpart_` script. It is one piece of that bar: a hotbar letter, a health bar, a number, a wallet line, or a row of effect icons.
-
-A skill move, an item skill, a triggerable, or `RUN_MECHANIC` all run a mechanic. A mechanic is a numbered `operations:` map. `SHOW_HUD_PART`, `HIDE_HUD_PART`, `CLEAR_HUD_PARTS`, and `SET_HUD_LAYOUT` are four entries in that same list, beside `PLAY_SOUND` or `SET_STAT`. One skill can show a HUD part and play a sound in the same mechanic.
-
-A `hudpart_` `operations:` list is narrower. It only reads `SHOW_HUD_PART` and `HIDE_HUD_PART`. Those two decide whether a failed requirement omits the part or draws its pad. `PLAY_SOUND` on a part does nothing.
+The HUD is the text bar above the hotbar. A layout is one arrangement of pieces for a way of playing. Combat shows health, stamina, and belly. A quieter layout shows health only. A part is one piece. Appearance is the shared nickname list so a part can say `font: hp` instead of the long pack font id. A skill shows or hides a piece from the same mechanic that plays a sound. The part itself only chooses what a failed requirement does: keep a blank of the same width, or leave the piece out.
 
 ```mermaid
 flowchart LR

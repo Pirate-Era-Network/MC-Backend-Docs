@@ -4,9 +4,11 @@ sidebar_position: 2
 
 # Layout
 
+A layout is the arrangement the player is looking at. Write one when that arrangement is reusable, such as the normal combat bar or a smaller bar for a cutscene. A temporary icon on the same bar is a show operation, not a second layout. Minecraft centers the whole bar, so the first slot is the pin (the hotbar letter in this pack). Every later slot is a distance from that pin.
+
 A layout script starts with `hud_`. It is `type: data`. The row lives under `data.parts` as `1:`, `2:`, in draw order.
 
-This layout puts the hotbar letter on the center anchor, then one health bar.
+The hotbar letter is the pin, then a health bar sits beside it.
 
 ```yaml
 hud_combat:
@@ -30,8 +32,8 @@ hud_combat:
 | Key | Where | What to write |
 | --- | --- | --- |
 | `part` | Row | `hudpart_` script name. The prefix on the value is optional. |
-| `offset` | Row or part | Negative space count for this piece. The row wins when both set it. `0` sits on the anchor. |
-| `balance` | Row or part | `PAIR` is the default. It keeps a left counter so the centered bar stays put. `RAW` is only for the center anchor. The row wins when both set it. |
+| `offset` | Row or part | Distance from the pin, as a negative space count. The row wins when both set it. `0` sits on the pin. |
+| `balance` | Row or part | `PAIR` is the default. It draws a matching blank on the left so the pin does not drift. `RAW` means this slot is the pin, and only the first hotbar letter uses it. The row wins when both set it. |
 | `enabled` | Row | `false` still draws the off-state for that slot. To force the pad, use [HIDE_HUD_PART](operations/hide-hud-part.md). |
 | `requirements` | Row or part | Numbered map, same shape as a mechanic. The row wins when both set it. Types are on [requirements](../mechanics/requirements.md). |
 | `priority` | Part | Draw order for an extra shown on top of the base row. Higher paints later. Default `0`. |
