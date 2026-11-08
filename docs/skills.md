@@ -81,7 +81,7 @@ Frontend script named `global_build_config` (the `rules.dsc` pointer). Keys in `
 
 Menus persist a `skillmove_*` id onto those REFERENCE stats with `SET_STAT`. Hotbar 1 still runs `RUN_SKILLMOVE` `stat: stat_skillmove_1`. Extra slots are the same pattern on another triggerable.
 
-Item Skills are a separate envelope (`itemskill_*`). See [items.md](items.md). Do not bind `itemskill_*` ids on `stat_skillmove_*`. Gear is items (`EQUIP_GEAR`). Cosmetics are stands (`EQUIP_COSMETIC`). Frontend may run both. See [cosmetics.md](cosmetics.md).
+Item Skills are a separate envelope (`itemskill_*`). See [items.md](items/README.md). Do not bind `itemskill_*` ids on `stat_skillmove_*`. Gear is items (`EQUIP_GEAR`). Cosmetics are stands (`EQUIP_COSMETIC`). Frontend may run both. See [cosmetics.md](cosmetics.md).
 
 ## Smoke
 

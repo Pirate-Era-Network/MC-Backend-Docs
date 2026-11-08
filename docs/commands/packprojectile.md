@@ -14,7 +14,7 @@ Each shot is one row on `projectile_index`. Trails and attached models share tha
 | --- | --- |
 | Command | [Mechanics/Individual_operations/projectile_command.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Mechanics/Individual_operations/projectile_command.dsc) |
 | Index | [Mechanics/Individual_operations/projectile_index.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Mechanics/Individual_operations/projectile_index.dsc) |
-| Option catalog | [mechanics](../mechanics/operations.md) |
+| Option catalog | [mechanics](../mechanics/operations/README.md) |
 
 ## Use
 

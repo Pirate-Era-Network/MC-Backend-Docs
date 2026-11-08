@@ -4,9 +4,7 @@ sidebar_position: 3
 
 # STAT
 
-A stat part prints a number from a pack stat: the current value, the max, or both.
-
-Shared row keys are on the [layout](../layout.md) page.
+A stat part prints a number from a pack stat. `view` chooses the current value, the max, or both. `BOTH` is the default and prints `current/max`. `maxchars` is the width, and shorter numbers are padded out to that length so the rest of the bar does not slide when the number changes. `pad` fills the width. `counter` is the left-side twin that cancels it. `Z` is the transparent lock for both, and they stay the same letter. Quote `color` when the value contains `#`, because a bare `#` starts a YAML comment. Shared row keys are on the [layout](../layout.md) page.
 
 | Key | What to write |
 | --- | --- |

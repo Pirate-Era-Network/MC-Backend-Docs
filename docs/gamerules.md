@@ -15,7 +15,7 @@ This is not a dump for every number. Stat caps are `levelcap_*`. Currency rules 
 | `language.default` | Live. Join / missing language flag |
 | `analytics.day_expire` | Live. Server day-bucket expire. Fallback `analytics_day_flag_expire` in `rules.dsc` |
 | `hud.default` | Live. Join / missing persist layout. Frontend `hud_example_default` |
-| `hunger.lose` | Live. `false` keeps the food bar full. `true` lets vanilla hunger drain. See [items.md](items.md) |
+| `hunger.lose` | Live. `false` keeps the food bar full. `true` lets vanilla hunger drain. See [items.md](items/README.md) |
 | `world.*` | Commented. Wilderness defaults. `phase5-areas` |
 | `party.enabled` | Commented. Full party/social configs stay their own scripts. `phase5-social` |
 | Vanilla damage list | Other registry: `allowed_damage_types_gamerules` |

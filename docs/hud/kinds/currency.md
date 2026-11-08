@@ -4,9 +4,7 @@ sidebar_position: 5
 
 # CURRENCY
 
-A currency part prints a wallet amount. Large amounts use the short suffixes from [appearance](../appearance.md): `k`, `m`, `b`, and `t`.
-
-Shared row keys are on the [layout](../layout.md) page.
+A currency part prints a wallet amount. `currency` is the pack `currency_` script, such as `currency_belly`. Amounts at or above a cutoff use the short suffixes from [appearance](../appearance.md). `1000` prints as `1k`, then `m`, `b`, and `t` as the amount grows. The part does not list those cutoffs. A hidden currency line keeps `currency_pad` characters of `pad_char`, so the hole stays the same width. `counter: Z` cancels the belly text so the line does not shove the bar. Shared row keys are on the [layout](../layout.md) page.
 
 | Key | What to write |
 | --- | --- |
@@ -14,8 +12,6 @@ Shared row keys are on the [layout](../layout.md) page.
 | `currency` | Pack `currency_` id, such as `currency_belly`. |
 | `pad` | Fill character when you also set a width. `Z` is the transparent lock. |
 | `counter` | Left-side twin so the line does not shove the bar. `Z` matches the pad. |
-
-The suffixes themselves live on `currency_dividers` in `hud_appearance`. `1000` prints as `1k`.
 
 ```yaml
 hudpart_belly:
@@ -27,8 +23,6 @@ hudpart_belly:
         currency: currency_belly
         counter: Z
 ```
-
-A hidden currency line keeps `currency_pad` characters of `pad_char` from appearance, so the hole stays the same width.
 
 ## Tips
 

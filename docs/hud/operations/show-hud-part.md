@@ -4,9 +4,7 @@ sidebar_position: 1
 
 # SHOW_HUD_PART
 
-`SHOW_HUD_PART` belongs in a mechanic `operations:` map. A skill move, an item skill, a triggerable, or `RUN_MECHANIC` all run that map. The same mechanic can show a part and play a sound as two numbered entries.
-
-On a `hudpart_` script the same type means something narrower. The part list only reads `SHOW_HUD_PART` and `HIDE_HUD_PART`. It decides whether a failed requirement omits the part or draws its pad. Other op types on a part do nothing.
+`SHOW_HUD_PART` forces a part on, or draws a part that is not in the layout row. In a mechanic `operations:` map it sits next to any other op, so the same mechanic can show a part and play a sound as two numbered entries. On a `hudpart_` script the same type is narrower. The part list only reads `SHOW_HUD_PART` and `HIDE_HUD_PART`, and here it means a failed requirement omits the piece instead of drawing its pad. Other op types on a part do nothing.
 
 ## In a mechanic
 

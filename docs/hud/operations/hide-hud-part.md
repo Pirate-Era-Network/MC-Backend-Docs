@@ -4,9 +4,7 @@ sidebar_position: 2
 
 # HIDE_HUD_PART
 
-`HIDE_HUD_PART` belongs in a mechanic `operations:` map. A skill move uses the same map. The hide forces that layout slot to draw its pad, so later offsets stay put.
-
-On a `hudpart_` script the same type is a presence rule. The part list only reads `SHOW_HUD_PART` and `HIDE_HUD_PART`. Other op types on a part do nothing.
+`HIDE_HUD_PART` forces a layout slot to draw its pad, so later offsets stay put. In a mechanic `operations:` map the hide lasts for `duration`, or until a clear or a layout change when `session: true`. On a `hudpart_` script the same type is a presence rule: a passed requirement draws the pad, and a failed one draws the on-state. The part list only reads `SHOW_HUD_PART` and `HIDE_HUD_PART`. Other op types on a part do nothing.
 
 ## In a mechanic
 

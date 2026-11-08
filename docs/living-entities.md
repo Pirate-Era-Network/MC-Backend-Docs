@@ -4,6 +4,8 @@ sidebar_position: 12
 
 # Living entities
 
+This script is the body. `stats` lists which pack stats it carries. `damage_routing` decides how incoming damage is applied, redirected, or split across those stats.
+
 **Partial.** Player bind and stat init work. Damage routing (APPLY / REDIRECT / SPLIT, conditions, OnSuccess / OnDeplete / OnFail) is Live. `deal_damage` is Live. Combat and resistance profiles use Vanilla Adjustifier `FLAT` `+` `-` `*` `/` on the vanilla intercept.
 
 Prefix: `livingentity_`. Default player config is `rules.player_entity` → `livingentity_player`. Example: `pirate-era-core-frontend/LivingEntities/player_living_entity.dsc`.
@@ -36,7 +38,7 @@ livingentity_player:
 | Key | Status |
 | --- | --- |
 | `stats` | Live (list of `stat_*` to init) |
-| `triggerables` | Live (list of `triggerable_*` to bind on join). See [triggers.md](triggers.md) |
+| `triggerables` | Live (list of `triggerable_*` to bind on join). See [triggers.md](triggers/README.md) |
 | `damage_routing` | Live. Ordered routes. Modes in `rules.dsc` `damage_routing_modes` |
 | `combat_profile` | Live on vanilla intercept. `mode` from `vanilla_adjustifiers`: `FLAT` overwrites the packet (use a Strength `stat_*` here). `+` `-` `*` `/` apply onto vanilla. `value` is a number or a `stat_*`. Missing `mode`, or a bare stat name, is `FLAT` |
 | `resistance_profile` | Live on vanilla intercept. Same adjustifier modes |

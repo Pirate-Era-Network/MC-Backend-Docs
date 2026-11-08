@@ -16,7 +16,7 @@ Start, advance, complete, and wipe call the same tasks as the quest mechanic ops
 | --- | --- |
 | Command | [Quests/quest_command.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Quests/quest_command.dsc) |
 | Progress | [Quests/quest_progress.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Quests/quest_progress.dsc) |
-| Option catalog | [quests](../quests.md) |
+| Option catalog | [quests](../quests/README.md) |
 
 ## Use
 

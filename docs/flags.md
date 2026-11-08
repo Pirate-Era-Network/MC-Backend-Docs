@@ -16,7 +16,7 @@ Persisted paths start with `data.`. Runtime paths start with `runtime_data.`.
 | `currencies` | `data.currencies` | Live (cap, min, death loss, withdraw) |
 | `analytics` | `data.analytics` | Live counters (`obtained` / `spent`). See [analytics.md](analytics.md) |
 | `builds` | `data.builds` | Contract |
-| `quests` | `data.quests` | Live (category id, then quest id, then status and objective progress). See [quests.md](quests.md) |
+| `quests` | `data.quests` | Live (category id, then quest id, then status and objective progress). See [quests.md](quests/README.md) |
 | `classes` | `data.classes` | Unused leftover. Do not implement. Class progress is Frontend `stat_*` only |
 | `mounts` | `data.mounts` | Contract. `entity_` id to a row (`stats`, `consumables`, `passenger_policy`, `defeated_at`). See [mounts.md](mounts.md) |
 | `equipped_mount` | `data.equipped_mount` | Contract. Owned `entity_` id the whistle uses. Not a key inside `data.mounts` |
@@ -36,11 +36,11 @@ Persisted paths start with `data.`. Runtime paths start with `runtime_data.`.
 | `world_locks` | `runtime_data.world_locks` | Live (expire flags written by `NO_WALK` / `HIDDEN` / other world-lock ops) |
 | `activelanguage` | `runtime_data.language` | Live |
 
-World areas are not a player flag. The index is the server flag `area_index`. Groups are the server flag `area_group_index`. See [areas.md](areas.md).
+World areas are not a player flag. The index is the server flag `area_index`. Groups are the server flag `area_group_index`. See [areas.md](areas/README.md).
 
 Placed waypoints are not a player flag. The index is the server flag `waypoint_index`. A `waypoint_` script with the same id keeps requirements and cost. See [travel.md](travel.md).
 
-Mongo later serializes the `flag_saves` set through getters. Do not persist runtime-only keys until you decide they belong here. Menu open-state lives in `menu_runtime_flags`, not `flag_saves`. Triggerable bind lives in `triggerable_runtime_flags`. HUD SHOW/HIDE overlays live in `hud_runtime_flags`. See [menus.md](menus.md), [triggers.md](triggers.md), and [HUD](hud/README.md).
+Mongo later serializes the `flag_saves` set through getters. Do not persist runtime-only keys until you decide they belong here. Menu open-state lives in `menu_runtime_flags`, not `flag_saves`. Triggerable bind lives in `triggerable_runtime_flags`. HUD SHOW/HIDE overlays live in `hud_runtime_flags`. See [menus.md](menus/README.md), [triggers.md](triggers/README.md), and [HUD](hud/README.md).
 
 ## What can go wrong
 
@@ -52,5 +52,5 @@ Mongo later serializes the `flag_saves` set through getters. Do not persist runt
 - Writing vault items onto a `gui: true` menu. Use `OPEN_STORAGE`. See [vaults.md](vaults.md).
 - Writing trade items onto a `gui: true` menu. Use `OPEN_TRADE`. See [trades.md](trades.md).
 - Writing these flags in a mechanic or join event. Use the domain setter.
-- Writing `data.quests` from a mechanic. Use `START_QUEST`, `ADVANCE_QUEST`, and `COMPLETE_QUEST`. See [quests.md](quests.md).
+- Writing `data.quests` from a mechanic. Use `START_QUEST`, `ADVANCE_QUEST`, and `COMPLETE_QUEST`. See [quests.md](quests/README.md).
 - Writing HUD SHOW/HIDE overlays onto `data.hud.layout`. Persist is the layout id only. Overlays are `runtime_data.hud`.

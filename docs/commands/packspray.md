@@ -14,7 +14,7 @@ Lists or clears tracked spray frames. Ops and the console can run it.
 | --- | --- |
 | Command | [Mechanics/Individual_operations/spray_command.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Mechanics/Individual_operations/spray_command.dsc) |
 | Index | [Mechanics/Individual_operations/spray_index.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Mechanics/Individual_operations/spray_index.dsc) |
-| Option catalog | [mechanics](../mechanics/operations.md) |
+| Option catalog | [mechanics](../mechanics/operations/README.md) |
 
 ## Use
 

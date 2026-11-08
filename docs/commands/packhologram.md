@@ -14,7 +14,7 @@ The command is a thin wrapper around `spawn_hologram_at_location`, the same spaw
 | --- | --- |
 | Command | [Mechanics/Individual_operations/hologram_command.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Mechanics/Individual_operations/hologram_command.dsc) |
 | Spawn | [Mechanics/Individual_operations/spawn_hologram_operation.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Mechanics/Individual_operations/spawn_hologram_operation.dsc) |
-| Option catalog | [mechanics](../mechanics/operations.md) |
+| Option catalog | [mechanics](../mechanics/operations/README.md) |
 
 ## Use
 

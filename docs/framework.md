@@ -27,11 +27,47 @@ Script **names** keep the prefix (`stat_stamina`). Flag **keys** on the player s
 
 ## Getters and setters
 
-Feature scripts do not write `- flag <player> ...`. Reads and writes go through domain utils (`stat_utils`, `currency_utils`, `living_entity_utils`, `language_utils`, `menu_utils`, `menu_load_utils`, `hud_utils`, `reset_utils`, `global_build_utils`, `gear_utils`, `item_utils`, `item_category_utils`, `global_item_utils`, `loot_utils`, `cost_utils`, `analytics_utils`, `season_pass_utils`, `title_utils`, `chat_utils`, `quest_utils`). Flag paths always come from `get_rule_value` → `flag_saves` or `menu_runtime_flags` or `hud_runtime_flags`. Target-aware scripts `- inject set_target`. Loot grant uses Cost Component GIVE (`apply_player_cost_delta`) for ITEM and CURRENCY. It does not write flags itself. Currency spend uses `APPLY_TRANSACTION` / Cost Component. Wallet vs item convert is `/withdraw` `/redeem` (or `convert_currency_between_forms`). Crate rolling flags live under `loot_crate_runtime_flags`. World static loot flags live under `static_loot_block_flag` (`Loot/static_loot_world.dsc`). `PLAYER` mode stores per-uuid contents under that parent. Bound locations are listed on `static_loot_index_flag` (`Loot/static_loot_index.dsc`). Persistent holograms are listed on `hologram_index_flag` (`Mechanics/Individual_operations/hologram_index.dsc`). Live GPS arrows are listed on `gps_index_flag` (`Mechanics/Individual_operations/gps_index.dsc`). Live spray frames are listed on `spray_index_flag` (`Mechanics/Individual_operations/spray_index.dsc`). Live projectile shots are listed on `projectile_index_flag` (`Mechanics/Individual_operations/projectile_index.dsc`). Live combat entities are listed on `entity_index_flag` (`Entities/entity_index.dsc`). Live cosmetic displays are listed on `cosmetic_index_flag` (`Mechanics/Individual_operations/cosmetic_index.dsc`). World areas are listed on `area_index_flag` (`Areas/area_index.dsc`). Area groups are listed on `area_group_index_flag` (`Areas/area_group_index.dsc`). Skill cages stay on `engine_notables` and are wiped on reload. Area notes are not. Obtain/spend counters: [analytics.md](analytics.md). Event receipts: [receipts.md](receipts.md). Engine Mongo connect is `Persistence/mongo_utils.dsc`. Pack database names are Frontend `global_mongo_config`. URI is `secrets.secret`. That is not player `flag_saves` persist.
+Feature scripts do not write `- flag <player> ...`. Reads and writes go through a domain util. Flag paths come from `get_rule_value`. Target-aware scripts `- inject set_target`. Loot grant uses Cost Component GIVE (`apply_player_cost_delta`) for ITEM and CURRENCY. Currency spend uses `APPLY_TRANSACTION`. Wallet versus item convert is `/withdraw` and `/redeem`.
+
+| Name | Job |
+| --- | --- |
+| `stat_utils` | Stat reads and writes |
+| `currency_utils` | Wallet reads and writes |
+| `living_entity_utils` | Living-entity init and routing helpers |
+| `language_utils` | Transcript lookup |
+| `menu_utils` / `menu_load_utils` | Menu open, fill, and runtime flags |
+| `hud_utils` | HUD layout and part flags |
+| `reset_utils` | Daily reset rows |
+| `global_build_utils` | Skill, gear, and cosmetic slot ids |
+| `gear_utils` | `flag_saves.gear` |
+| `item_utils` / `global_item_utils` / `item_category_utils` | Item create, global item config, category index |
+| `loot_utils` | Table rolls |
+| `cost_utils` | Cost Component |
+| `analytics_utils` | Obtain and spend counters. See [analytics](analytics.md) |
+| `season_pass_utils` | Season progress |
+| `title_utils` | Chat title lists |
+| `chat_utils` | Chat rows and the word filter |
+| `quest_utils` | Quest progress |
+| `flag_saves` / `menu_runtime_flags` / `hud_runtime_flags` | Flag path roots from `get_rule_value` |
+| `loot_crate_runtime_flags` | Crate rolling lock and pending grants |
+| `static_loot_block_flag` | World chest parent (`Loot/static_loot_world.dsc`). `PLAYER` contents sit under that parent |
+| `static_loot_index_flag` | Bound chest locations (`Loot/static_loot_index.dsc`) |
+| `hologram_index_flag` | Persistent holograms (`hologram_index.dsc`) |
+| `gps_index_flag` | Live GPS arrows (`gps_index.dsc`) |
+| `spray_index_flag` | Live spray frames (`spray_index.dsc`) |
+| `projectile_index_flag` | Live projectile shots (`projectile_index.dsc`) |
+| `entity_index_flag` | Live combat mobs (`Entities/entity_index.dsc`) |
+| `cosmetic_index_flag` | Live cosmetic displays (`cosmetic_index.dsc`) |
+| `area_index_flag` | World areas (`Areas/area_index.dsc`) |
+| `area_group_index_flag` | Area groups (`Areas/area_group_index.dsc`) |
+| `engine_notables` | Skill cages. Wiped on reload. Area notes are not |
+| Mongo | `Persistence/mongo_utils.dsc`. Pack names are Frontend `global_mongo_config`. URI is `secrets.secret`, not player `flag_saves` |
+
+Event receipts: [receipts](receipts.md).
 
 ## Mechanics in one line
 
-Something builds a context map (`build_mechanic_context`) and fires `run_mechanic_config`. That raises custom event `execute_mechanic`. Requirements run, then delay/repeat, then each operation. Operations call `resolve_mechanic_operation_targets`. World events reach this through `fire_stat_event` ([triggers.md](triggers.md)). Details: [mechanics/README.md](mechanics/README.md).
+Something builds a context map (`build_mechanic_context`) and fires `run_mechanic_config`. That raises custom event `execute_mechanic`. Requirements run, then delay/repeat, then each operation. Operations call `resolve_mechanic_operation_targets`. World events reach this through `fire_stat_event` ([triggers.md](triggers/README.md)). Details: [mechanics/README.md](mechanics/README.md).
 
 ## What can go wrong
 

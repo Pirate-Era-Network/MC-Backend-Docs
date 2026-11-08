@@ -4,9 +4,7 @@ sidebar_position: 3
 
 # Appearance
 
-Pack fonts have long ids such as `pehud_scaled_fontpack:pehud_hp`. This script is the nickname list for the whole pack. Add a line when a new font exists, when the empty-bar letter changes, or when a big wallet number should shorten to `1k`. Parts then write `font: hp`.
-
-The id contains a colon, and YAML treats a bare colon as "the next thing is nested under this key," so the name has to be in quotes or the part never receives it.
+Write `hud_appearance` once for the pack. It is the nickname list parts use, so a new font, a new empty-bar letter, or a new belly cutoff (`1k`, then `m`, `b`, and `t`) is one edit here. A part then writes `font: hp` instead of a long id such as `pehud_scaled_fontpack:pehud_hp`. The id contains a colon. YAML treats a bare colon as a nested key, so every `namespace:file` value has to be quoted or the part never receives the font.
 
 ```yaml
 hud_appearance:

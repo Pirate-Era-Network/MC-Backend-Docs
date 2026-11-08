@@ -15,7 +15,7 @@ The block flag stores the table, cooldown, and mode (`shared` or `player`). Open
 | Command | [Loot/static_loot_command.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Loot/static_loot_command.dsc) |
 | World listener | [Loot/static_loot_world.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Loot/static_loot_world.dsc) |
 | Index | [Loot/static_loot_index.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Loot/static_loot_index.dsc) |
-| Option catalog | [loot](../loot.md) |
+| Option catalog | [loot](../loot/README.md) |
 
 ## Use
 

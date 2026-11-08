@@ -4,17 +4,13 @@ sidebar_position: 2
 
 # BAR
 
-A bar turns a consumable stat into one letter from the empty-to-full alphabet. Current and max come from that stat. The letter is the fill.
-
-Shared row keys are on the [layout](../layout.md) page.
+A bar reads a consumable stat and picks one letter from the empty-to-full alphabet. Current against max decides the letter. The hidden state is the empty letter. In this pack that letter is `j`, the first entry of `bar_alphabet` on [appearance](../appearance.md). That empty letter is the pad, so a bar does not add a second pad character. Point `stat` at a consumable. A stat whose current and max are the same number stays on the full letter. A bar can set its own `bar_alphabet` when that one bar uses different letters. Shared row keys are on the [layout](../layout.md) page.
 
 | Key | What to write |
 | --- | --- |
 | `font` | Short name from [appearance](../appearance.md), such as `hp` or `stam`. |
 | `stat` | Pack `stat_` whose current value is compared with its max. |
 | `bar_alphabet` | Optional. A list of letters for this bar only. Omit it to use the appearance list. |
-
-The hidden state is the empty letter. In this pack that letter is `j`, the first entry of `bar_alphabet`.
 
 ```yaml
 hudpart_hp_bar:
@@ -25,8 +21,6 @@ hudpart_hp_bar:
         font: hp
         stat: stat_player_maximum_health
 ```
-
-Point `stat` at a consumable. A stat whose current and max are the same number stays on the full letter.
 
 ## Tips
 

@@ -87,7 +87,7 @@ Paid rows require `type: PAID`. Shop menus call `SET_SEASON_TRACK` after `APPLY_
 
 ## Ops
 
-See [mechanics/operations.md](mechanics/operations.md). `/packseasonpass` opens PAGE. `/packseasonpass scroll` opens SCROLL. `xp` / `track` / `redeem` / `wipe` are op.
+See [mechanics/operations.md](mechanics/operations/README.md). `/packseasonpass` opens PAGE. `/packseasonpass scroll` opens SCROLL. `xp` / `track` / `redeem` / `wipe` are op.
 
 Kill XP smoke: `triggerable_seasonpass_kill_xp` (`ON_KILL` + `GRANT_SEASON_XP` `amount: 1`). Bind it on the living entity. Do not add a mythicmob world script.
 

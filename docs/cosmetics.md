@@ -61,7 +61,7 @@ cosmetic_example_cloak:
 
 `SPAWN_COSMETIC` session lifetime. Omit `slot:` for a passenger stand. `slot: helmet` / `chestplate` / hands overlay that inventory cell.
 
-`CLEAR_COSMETIC` drop persist channel or `session: true`. See [mechanics/operations.md](mechanics/operations.md).
+`CLEAR_COSMETIC` drop persist channel or `session: true`. See [mechanics/operations.md](mechanics/operations/README.md).
 
 ## Gear persist
 

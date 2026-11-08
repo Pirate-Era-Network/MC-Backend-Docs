@@ -4,9 +4,7 @@ sidebar_position: 1
 
 # GLYPH
 
-A glyph is one pack letter. Use it for the hotbar anchor, an outline, or a full-screen frame.
-
-Shared row keys (`offset`, `balance`, `requirements`, `priority`) are on the [layout](../layout.md) page.
+A glyph draws one letter from a pack font. The hotbar pin, an outline, and a full-screen frame are this kind. `glyph` (or `on_glyph`) is the letter while the part is on. `off_glyph` is the letter while it is off. If you omit the off letter, the engine uses the uppercase twin, which is the same width in this pack, so the rest of the row stays put. The letter has to exist in that font. The first hotbar letter sets `balance: RAW` because it is the pin. Any later glyph leaves `balance` off so it stays `PAIR`. Row placement is on the [layout](../layout.md) page.
 
 | Key | What to write |
 | --- | --- |
@@ -14,8 +12,6 @@ Shared row keys (`offset`, `balance`, `requirements`, `priority`) are on the [la
 | `glyph` | The letter while the part is on. |
 | `on_glyph` | Same job as `glyph`. Use this when you also set an off letter. |
 | `off_glyph` | The letter while the part is off. If you omit it, the off letter is the uppercase twin of the on letter. |
-
-The letter has to exist in that font.
 
 ```yaml
 hudpart_hotbar:
@@ -27,8 +23,6 @@ hudpart_hotbar:
         glyph: a
         balance: RAW
 ```
-
-`balance: RAW` is here because this letter is the center anchor. A normal glyph leaves `balance` off so it stays `PAIR`. See [layout](../layout.md).
 
 A full-screen frame uses `glyph` plus `off_glyph`, then [SHOW_HUD_PART](../operations/show-hud-part.md) on the part. Requirement types are on [requirements](../../mechanics/requirements.md).
 

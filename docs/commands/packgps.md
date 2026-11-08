@@ -14,7 +14,7 @@ One arrow per player, stored on `gps_index` by owner uuid. Arrows are timed. Sta
 | --- | --- |
 | Command | [Mechanics/Individual_operations/gps_command.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Mechanics/Individual_operations/gps_command.dsc) |
 | Index | [Mechanics/Individual_operations/gps_index.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Mechanics/Individual_operations/gps_index.dsc) |
-| Option catalog | [mechanics](../mechanics/operations.md) |
+| Option catalog | [mechanics](../mechanics/operations/README.md) |
 
 ## Use
 

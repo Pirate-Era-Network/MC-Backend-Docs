@@ -4,11 +4,7 @@ sidebar_position: 4
 
 # SET_HUD_LAYOUT
 
-`SET_HUD_LAYOUT` belongs in a mechanic `operations:` map. A skill move uses the same map. It replaces the player's one active layout with another `hud_` script and keeps that choice. The bar is one string from that row, so the previous layout stops drawing.
-
-A layout change also clears show and hide overlays, including a `session: true` overlay. The new row starts from the layout script alone.
-
-This op is for mechanics. A `hudpart_` `operations:` list only reads `SHOW_HUD_PART` and `HIDE_HUD_PART`, so a layout change on a part does nothing.
+`SET_HUD_LAYOUT` replaces the layout id stored on the player and keeps that choice. The bar is one string from the new `hud_` row, so the previous layout stops drawing. The change also clears show and hide overlays, including a `session: true` overlay, and the new row starts from the layout script alone. A later `SET_HUD_LAYOUT` replaces this one. The layout name is the script name, and `hud_combat` and `combat` both resolve to the `hud_` script. This op is for mechanics. A `hudpart_` `operations:` list only reads `SHOW_HUD_PART` and `HIDE_HUD_PART`, so a layout change on a part does nothing.
 
 | Key | What to write |
 | --- | --- |

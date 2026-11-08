@@ -76,7 +76,7 @@ Order for each player:
 3. `area_allows_travel` at the player's feet. `TRAVEL: DENY` blocks the op. Walking is not blocked. This gate is never skipped.
 4. `requirements`, unless `ignore_requirements` is true.
 5. `travel_cost`, unless `ignore_cost` is true. A failed pay does not teleport.
-6. Teleport, then `fire_quest_waypoint`. A `WAYPOINT` quest objective also advances when the player walks within `arrive_range` of the resolved spot. See [quests.md](quests.md). Use `START_GPS` with `waypoint:` or `/packgps waypoint` to point the arrow. Quests do not auto-start GPS.
+6. Teleport, then `fire_quest_waypoint`. A `WAYPOINT` quest objective also advances when the player walks within `arrive_range` of the resolved spot. See [quests.md](quests/README.md). Use `START_GPS` with `waypoint:` or `/packgps waypoint` to point the arrow. Quests do not auto-start GPS.
 
 The traveler pays. `TAKE` goes to Void. The analytics tag is the waypoint script id.
 

@@ -4,6 +4,8 @@ sidebar_position: 6
 
 # Stats
 
+A `stat_` script stores one of four kinds. `VALUE` stores a level and can use an equation. `BOOLEAN` stores on or off. `NUMBER` stores a plain number. `REFERENCE` stores a script id. `kind` is required. A consumable block, a regen block, and an event block are optional parts of that same script. A world lock is a mechanic operation with its own flag. It is not one of these kinds. See [control effects](control-effects.md).
+
 **Live** for value, regen, consumable, affects, linear equation. **Partial** for combat-state regen (PAUSE/SLOWED), percent-loss on death, extra equations.
 
 Prefix: `stat_`. Pack stats live on Frontend (`StatConfig.dsc`, `Stats/control_effect_stats.dsc`, `Stats/event_stat_examples.dsc`). World-lock ops live on Backend (`NO_WALK`, `HIDDEN`, …). Hidden hook: `utils/control_effects/control_effect_hidden.dsc`. See [control-effects.md](control-effects.md).
@@ -43,7 +45,7 @@ stat_stamina:
 | --- | --- |
 | `stat_consumable_config` | Consumable (current value on `data.consumed_stats`) |
 | `stat_regen_config` | Regen (feeds other stats each second) |
-| `stat_event_config` | Eventstat (world events fire Mechanics). See [triggers.md](triggers.md) |
+| `stat_event_config` | Eventstat (world events fire Mechanics). See [triggers.md](triggers/README.md) |
 | neither of the above | Plain value stat |
 
 `stat_config.kind` is required on Frontend (stay whole, do not omit it on VALUE rows). Options in `rules.dsc` `stat_kinds`:
@@ -143,7 +145,7 @@ Temporary potions: `CAST_VANILLA_EFFECT`. Temporary world locks: `NO_WALK` / `HI
 | `mechanics` | Live |
 | `requirements` | Live |
 
-Item-hosted eventstats are Contract. Living-entity list is Live. See [triggers.md](triggers.md).
+Item-hosted eventstats are Contract. Living-entity list is Live. See [triggers.md](triggers/README.md).
 
 ## Runtime
 

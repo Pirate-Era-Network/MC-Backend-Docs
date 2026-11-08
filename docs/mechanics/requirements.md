@@ -4,9 +4,9 @@ sidebar_position: 4
 
 # Mechanic requirements
 
-**Live.** Missing or empty `requirements` always pass. Unknown `type` values fail.
+An empty requirement list passes. An unknown `type` fails. A `STAT` check reads that stat's level (the overlay level when one is present). Current stamina, and the health pool, are different reads. Stamina current is a consumable write. Health in this table is the `HEALTH` row.
 
-Types come from `rules.dsc` `mechanic_requirement_types`. Who is checked comes from `source` (`mechanic_value_sources`). Default `caster`. `target` is the primary context target (same as value resolution). Environment helpers (`entity_is_grounded`, `entity_is_in_water`, `entity_is_in_air`) take any entity. Call them from other systems too.
+**Live.** Types come from `rules.dsc` `mechanic_requirement_types`. Who is checked comes from `source` (`mechanic_value_sources`). Default `caster`. `target` is the primary context target (same as value resolution). Environment helpers (`entity_is_grounded`, `entity_is_in_water`, `entity_is_in_air`) take any entity. Call them from other systems too.
 
 ```yaml
 requirements:

@@ -4,9 +4,7 @@ sidebar_position: 4
 
 # TEXT
 
-A text part prints a transcript key or a literal string.
-
-Shared row keys are on the [layout](../layout.md) page. Width keys (`maxchars`, `pad`, `counter`, `color`) work the same way as on a [stat](stat.md).
+A text part prints words. `text` is a transcript key such as `hud_stunned_text`, or a literal when the string will not be translated. Put the words in the transcript under that key. Custom-font copy stays lowercase, because that font has no capital glyphs for words. Width keys (`maxchars`, `pad`, `counter`, `color`) work the same way as on a [stat](stat.md) part. This part is usually an extra: leave it out of the base row and show it with [SHOW_HUD_PART](../operations/show-hud-part.md), and keep `balance` on `PAIR`. Shared row keys are on the [layout](../layout.md) page.
 
 | Key | What to write |
 | --- | --- |
@@ -16,8 +14,6 @@ Shared row keys are on the [layout](../layout.md) page. Width keys (`maxchars`, 
 | `pad` | Fill character. `Z` keeps the width. |
 | `counter` | Left-side twin. `Z` matches the pad. |
 | `color` | Optional. Quote a value that contains `#`. |
-
-Custom-font copy stays lowercase. The font has no capital glyphs for words.
 
 ```yaml
 hudpart_stunned_text:

@@ -13,7 +13,7 @@ The item is built with `create_item_from_config` for the receiver, then given wi
 | Piece | Where |
 | --- | --- |
 | Command | [Items/item_command.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Items/item_command.dsc) |
-| Option catalog | [items](../items.md) |
+| Option catalog | [items](../items/README.md) |
 
 ## Use
 

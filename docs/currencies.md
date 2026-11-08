@@ -4,9 +4,9 @@ sidebar_position: 8
 
 # Currencies
 
-**Live.** Frontend `currency_*` scripts are the registry. The engine does not pick a default currency.
+Each currency chooses a wallet, a coin item, or both. The pack lists every `currency_` script, and that list is the registry. The engine does not pick a default. Shops pay the wallet.
 
-Prefix: `currency_`. Example: `pirate-era-core-frontend/currencies/main_currencies.dsc`.
+**Live.** Prefix: `currency_`. Example: `pirate-era-core-frontend/currencies/main_currencies.dsc`.
 
 ```yaml
 currency_belly:
@@ -82,7 +82,7 @@ P2P `APPLY_TRANSACTION` still uses `player_transfer` so a shop or later wallet-i
 
 ## Cost Component
 
-Shops and travel: `APPLY_TRANSACTION` ([operations.md](mechanics/operations.md)). Optional `analytics:` tag for sink counters.
+Shops and travel: `APPLY_TRANSACTION` ([operations.md](mechanics/operations/README.md)). Optional `analytics:` tag for sink counters.
 
 `TAKE` hits source. `GIVE` hits destination. Put the purchase in `onsuccess`.
 

@@ -16,7 +16,7 @@ Staff tool for indexed combat mobs. Ops and the console can run it. Spawn, radiu
 | Index | [Entities/entity_index.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Entities/entity_index.dsc) |
 | Spawn | [Entities/entity_spawn.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Entities/entity_spawn.dsc) |
 | Smoke | [Entities/entity_smoke.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Entities/entity_smoke.dsc) |
-| Option catalog | [entities](../entities.md) |
+| Option catalog | [entities](../entities/README.md) |
 
 ## Use
 

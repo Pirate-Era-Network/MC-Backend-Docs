@@ -15,7 +15,7 @@ A placed area is a noted cuboid or ellipsoid plus a row on `area_index`. It is n
 | Command | [Areas/area_command.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Areas/area_command.dsc) |
 | Index | [Areas/area_index.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Areas/area_index.dsc) |
 | Groups | [Areas/area_group_index.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Areas/area_group_index.dsc) |
-| Option catalog | [areas](../areas.md) |
+| Option catalog | [areas](../areas/README.md) |
 
 ## Use
 

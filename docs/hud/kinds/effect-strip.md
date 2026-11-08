@@ -4,9 +4,7 @@ sidebar_position: 7
 
 # EFFECT_STRIP
 
-An effect strip is a fixed row of slots. You list every slot. Unused slots still draw, so the row keeps its width.
-
-Shared row keys are on the [layout](../layout.md) page.
+An effect strip is a fixed row of slots you list yourself. Unused slots still draw, which is what keeps the row the same width when a stat is off. `CHARS` draws `on_glyph` while that slot's stat is on, and `off_glyph` while it is off or the slot has no stat. `TIMES` prints the seconds left on that stat, and `step` is the gap between those countdown cells. Default mode is `CHARS`, and `step` is only read by `TIMES`. One part is one mode, so icons and a countdown are two parts. Shared row keys are on the [layout](../layout.md) page.
 
 | Key | What to write |
 | --- | --- |
@@ -15,8 +13,6 @@ Shared row keys are on the [layout](../layout.md) page.
 | `slots` | Numbered map. Each slot can set `on_glyph`, `off_glyph`, and `stat`. |
 | `step` | Space between leftover-time cells. Only `TIMES` reads it. Default is `11`. |
 | `counter` | Left-side twin for the whole row. `Z` holds the width. |
-
-`CHARS` draws `on_glyph` while that slot's stat is on, and `off_glyph` while it is off or the slot has no stat. `TIMES` prints the seconds left on that stat. An off slot still takes a cell so the row width holds.
 
 ```yaml
 hudpart_effects:
