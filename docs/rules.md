@@ -44,7 +44,7 @@ Each entry has `type` (usually `data`) and `value` (the name prefix). Reload col
 | `waypoint_prefix` | `waypoint_` | Live. Placed spots share the id. See [travel.md](travel.md) |
 | `entity_config` | `entity_` | Live. Piece prefixes below also start with `entity_`. An `entity_` list must skip those names |
 | `entityai_prefix` | `entityai_` | Live. Targeting, cast pattern, reactions, companion, notify_allies |
-| `entityanimation_prefix` | `entityanimation_` | Live. Model Engine state for `peanimate` (delay, lock, invuln) |
+| `entityanimation_prefix` | `entityanimation_` | Live. Model Engine state for `megstate` (delay, lock, invuln) |
 | `entitymodel_prefix` | `entitymodel_` | Live. Model Engine blueprint, scale, hitbox |
 | `entityskill_prefix` | `entityskill_` | Live. MELEE / CAST / FOLLOW_UP / HURT wrap around a `skillmove_` |
 | `entityprofile_prefix` | `entityprofile_` | Live. Stat multiplier template |
@@ -65,8 +65,8 @@ Each entry has `type` (usually `data`) and `value` (the name prefix). Reload col
 | `chatwords_prefix` | `chatwords_` | Live. Optional word list. See [chat.md](chat.md) |
 | `general_transcript` | `general_transcript_` | Live |
 | `menu_prefix` | `menu_` | Live |
-| `hud_prefix` | `hud_` | Live. Layout of `hudpart_` rows. See [hud.md](hud.md) |
-| `hudpart_prefix` | `hudpart_` | Live. One actionbar glyph piece. See [hud.md](hud.md) |
+| `hud_prefix` | `hud_` | Live. Layout of `hudpart_` rows. See [HUD](hud/README.md) |
+| `hudpart_prefix` | `hudpart_` | Live. One actionbar glyph piece. See [HUD](hud/README.md) |
 | `dailyreset_prefix` | `dailyreset_` | Live. Clocked wipe/grant rows. See [resets.md](resets.md) |
 | `triggerable_prefix` | `triggerable_` | Live |
 | `levelcap_prefix` | `levelcap_` | Live (shared VALUE minlevel/maxlevel) |
@@ -320,7 +320,7 @@ Unknown view names become `EFFECTIVE`. Add a new row here when a new layer lands
 | `gamerules_language_keys` | `default` | [gamerules.md](gamerules.md), [language.md](language.md) |
 | `gamerules_language_keys` | `default` | [gamerules.md](gamerules.md), [language.md](language.md) |
 | `gamerules_analytics_keys` | `day_expire` | [gamerules.md](gamerules.md), [analytics.md](analytics.md) |
-| `gamerules_hud_keys` | `default` | [gamerules.md](gamerules.md), [hud.md](hud.md) |
+| `gamerules_hud_keys` | `default` | [gamerules.md](gamerules.md), [HUD](hud/README.md) |
 | `gamerules_hunger_keys` | `lose` | [gamerules.md](gamerules.md), [items.md](items.md) |
 | `player_pay_modes` | ALLOW / TRADE_ONLY | [currencies.md](currencies.md) |
 | `currency_data_keys` | `display` / `rules` / `withdraw_item` / `form` | [currencies.md](currencies.md) |
@@ -392,18 +392,18 @@ Unknown view names become `EFFECTIVE`. Add a new row here when a new layer lands
 | `stat_presentation_effect_duration` | Potion recast window | [control-effects.md](control-effects.md) |
 | `stat_presentation_vanilla_flag` | Runtime flag for applied potions | [control-effects.md](control-effects.md) |
 | `global_menu_appearance` | Frontend `gui_appearance` script name | [menus.md](menus.md) |
-| `global_hud_appearance` | Frontend `hud_appearance` script name | [hud.md](hud.md) |
-| `hud_runtime_flags` | Layout, shown, hidden | [hud.md](hud.md) |
-| `hud_runtime_flag_expire` | Expire on SHOW/HIDE when duration omitted (`1h`) | [hud.md](hud.md) |
-| `hud_data_keys` | Layout / part / op YAML names | [hud.md](hud.md) |
-| `hud_appearance_keys` | Catalog field names on `hud_appearance` | [hud.md](hud.md) |
-| `hud_part_kinds` | GLYPH / BAR / STAT / TEXT / CURRENCY / BOOLEAN / EFFECT_STRIP | [hud.md](hud.md) |
-| `hud_stat_views` | CURRENT / MAX / BOTH | [hud.md](hud.md) |
-| `hud_balance_modes` | PAIR / RAW | [hud.md](hud.md) |
-| `hud_strip_modes` | CHARS / TIMES | [hud.md](hud.md) |
-| `hud_presence_operations` | SHOW_HUD_PART / HIDE_HUD_PART on a hudpart_ | [hud.md](hud.md) |
-| `hud_defaults` | Pad char, bar alphabet, space font | [hud.md](hud.md) |
-| `hud_currency_dividers` | Fallback `t` / `b` / `m` / `k` | [hud.md](hud.md) |
+| `global_hud_appearance` | Frontend `hud_appearance` script name | [HUD](hud/README.md) |
+| `hud_runtime_flags` | Layout, shown, hidden | [HUD](hud/README.md) |
+| `hud_runtime_flag_expire` | Expire on SHOW/HIDE when duration omitted (`1h`) | [HUD](hud/README.md) |
+| `hud_data_keys` | Layout / part / op YAML names | [HUD](hud/README.md) |
+| `hud_appearance_keys` | Catalog field names on `hud_appearance` | [HUD](hud/README.md) |
+| `hud_part_kinds` | GLYPH / BAR / STAT / TEXT / CURRENCY / BOOLEAN / EFFECT_STRIP | [HUD](hud/README.md) |
+| `hud_stat_views` | CURRENT / MAX / BOTH | [HUD](hud/README.md) |
+| `hud_balance_modes` | PAIR / RAW | [HUD](hud/README.md) |
+| `hud_strip_modes` | CHARS / TIMES | [HUD](hud/README.md) |
+| `hud_presence_operations` | SHOW_HUD_PART / HIDE_HUD_PART on a hudpart_ | [HUD](hud/README.md) |
+| `hud_defaults` | Pad char, bar alphabet, space font | [HUD](hud/README.md) |
+| `hud_currency_dividers` | Fallback `t` / `b` / `m` / `k` | [HUD](hud/README.md) |
 | `daily_reset_clocks` | When DAILY/HOURLY rows become due (OS time, not a player display) | [resets.md](resets.md) |
 | `daily_reset_clock_keys` | YAML names on `daily_reset_clocks` | [resets.md](resets.md) |
 | `daily_reset_allowed_clock_minutes` | 0 / 15 / 30 / 45. Matches world `minutely every:15` | [resets.md](resets.md) |

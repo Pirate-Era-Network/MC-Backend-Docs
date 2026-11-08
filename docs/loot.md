@@ -6,7 +6,7 @@ sidebar_position: 20
 
 **Partial / Live resolver.** Prefixes `loottable_`, `lootpool_`, `lootentry_`, `lootcrate_`. Backend rolls those scripts and grants through `grant_loot_results`. Party split is not in this engine.
 
-Files: `Loot/loot_utils.dsc`, `Loot/loot_grant.dsc`, `Loot/loot_crate.dsc`, `Loot/static_loot_world.dsc`, `Loot/static_loot_index.dsc`. Ops: `GRANT_LOOT`, `OPEN_LOOT_CRATE`, `TELEPORT`. Item category index: `Items/item_category_utils.dsc`.
+Files: `Loot/loot_utils.dsc`, `Loot/loot_grant.dsc`, `Loot/loot_crate.dsc`, `Loot/static_loot_world.dsc`, `Loot/static_loot_command.dsc`, `Loot/static_loot_index.dsc`. `/staticloot` is [commands/staticloot](commands/staticloot.md). Ops: `GRANT_LOOT`, `OPEN_LOOT_CRATE`, `TELEPORT`. Item category index: `Items/item_category_utils.dsc`.
 
 Examples: `pirate-era-core-frontend/Loot/`
 

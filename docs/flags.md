@@ -26,7 +26,7 @@ Persisted paths start with `data.`. Runtime paths start with `runtime_data.`.
 | `cosmetic_overlays` | `data.cosmetic_overlays` | Live (session VANILLA/HELD overlay backup. Previous ItemTag per slot) |
 | `season_pass` | `data.season_pass` | Live (per `seasonpass_` id: type FREE/PAID, level, progress, redeemed.free / redeemed.paid) |
 | `chat_prefix` | `data.chat_prefix` | Live (`prefixes` and `suffixes` are ordered `title_*` id lists). See [titles.md](titles.md). Mute and the word warning counter are `chat_runtime_flags`, not this path. See [chat.md](chat.md) |
-| `hud_layout` | `data.hud.layout` | Live (persist `hud_` script id). SHOW/HIDE overlays stay on `hud_runtime_flags`. See [hud.md](hud.md) |
+| `hud_layout` | `data.hud.layout` | Live (persist `hud_` script id). SHOW/HIDE overlays stay on `hud_runtime_flags`. See [HUD](hud/README.md) |
 | `daily_reset` | `data.daily_reset` | Live (last applied period per `dailyreset_` id). See [resets.md](resets.md) |
 | `activebuild` | `runtime_data.activebuild` | Contract |
 | `activemount` | `runtime_data.activemount` | Contract. Live mount entity. Script id is `equipped_mount`. See [mounts.md](mounts.md) |
@@ -40,7 +40,7 @@ World areas are not a player flag. The index is the server flag `area_index`. Gr
 
 Placed waypoints are not a player flag. The index is the server flag `waypoint_index`. A `waypoint_` script with the same id keeps requirements and cost. See [travel.md](travel.md).
 
-Mongo later serializes the `flag_saves` set through getters. Do not persist runtime-only keys until you decide they belong here. Menu open-state lives in `menu_runtime_flags`, not `flag_saves`. Triggerable bind lives in `triggerable_runtime_flags`. HUD SHOW/HIDE overlays live in `hud_runtime_flags`. See [menus.md](menus.md), [triggers.md](triggers.md), and [hud.md](hud.md).
+Mongo later serializes the `flag_saves` set through getters. Do not persist runtime-only keys until you decide they belong here. Menu open-state lives in `menu_runtime_flags`, not `flag_saves`. Triggerable bind lives in `triggerable_runtime_flags`. HUD SHOW/HIDE overlays live in `hud_runtime_flags`. See [menus.md](menus.md), [triggers.md](triggers.md), and [HUD](hud/README.md).
 
 ## What can go wrong
 

@@ -169,7 +169,7 @@ Read-only tags (`internal_name`, `threat_table`, `has_target`, …) are not conf
 | `mythicpath` | `MYTHIC_PATH` | Live |
 | `mythicsignal` | `MYTHIC_SIGNAL` | Live |
 | `mythicthreat` | `MYTHIC_THREAT` | Live |
-| `mythicskill` | not used | Boss / hurt clips use `peanimate` / `ANIMATE_ENTITY` + `skillmove_`. Do not put Mythic skill bodies on the base shell |
+| `mythicskill` | not used | Boss / hurt clips use `ANIMATE_ENTITY` (`megstate`) + `skillmove_`. Do not put Mythic skill bodies on the base shell |
 
 ### Out of this system
 

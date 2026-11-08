@@ -15,7 +15,8 @@ Paper `chat.type.text` ignores `FORMAT` / `setFormat` and logs `<displayName> me
 | Piece | Path |
 | --- | --- |
 | Prefixes, kinds, filter durations | [rules.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/rules.dsc) |
-| Assembler, filter, `/packchat` | [Chat/chat_utils.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Chat/chat_utils.dsc) |
+| Assembler and filter | [Chat/chat_utils.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Chat/chat_utils.dsc) |
+| `/packchat` | [Chat/chat_command.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Chat/chat_command.dsc). See [commands/packchat](commands/packchat.md) |
 | `on player chats` | [Chat/chat_world.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Chat/chat_world.dsc) |
 | Title string lists | [Titles/title_utils.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/Titles/title_utils.dsc) |
 | Format script (same order, Paper ignores it) | `pirate-era-core-frontend/formats/formats.dsc` `player_chat_formatting` |

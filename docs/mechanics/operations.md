@@ -1285,55 +1285,12 @@ Harvest: `GpsSystem.dsc` (carved_pumpkin CMD 182 arrow, hide from others, point 
 
 ### SHOW_HUD_PART / HIDE_HUD_PART / CLEAR_HUD_PARTS / SET_HUD_LAYOUT
 
-Tasks: `operation_show_hud_part`, `operation_hide_hud_part`, `operation_clear_hud_parts`, `operation_set_hud_layout`. Overlay ENTITY like OPEN_MENU (default SELF). FigJam ShowHudElement is SHOW_HUD_PART, not a one-shot packet.
+- [SHOW_HUD_PART](../hud/operations/show-hud-part.md)
+- [HIDE_HUD_PART](../hud/operations/hide-hud-part.md)
+- [CLEAR_HUD_PARTS](../hud/operations/clear-hud-parts.md)
+- [SET_HUD_LAYOUT](../hud/operations/set-hud-layout.md)
 
-The composer is [hud.md](../hud.md). Layout is a `hud_` script of `hudpart_` rows. Glyph letters live in Frontend `hud_appearance`. Backend stacks legacy `add_hud_element` / `add_hud_text`. Draw is `player_game_loop` after regen. GPS is not these ops.
-
-SHOW and HIDE stamp overlays like SET_STAT. `duration:` expires. `session: true` with no duration lasts until HIDE, CLEAR, or SET_HUD_LAYOUT. Omitting both uses `hud_runtime_flag_expire` (`1h`). SET_HUD_LAYOUT persists `flag_saves.hud_layout` and parent-wipes `runtime_data.hud`.
-
-CLEAR without a filter drops every SHOW/HIDE overlay. `filter:` (or `part:` / `kind:`) may be a `hudpart_` id or a kind name (`GLYPH`).
-
-Shake and bleed are PLAY_EFFECT `SCREEN_SHAKE` / `BLOODY_SCREEN`, not HUD kinds. Full-screen overlays are `GLYPH` plus `requirements` and `SHOW_HUD_PART`. See [hud.md](../hud.md).
-
-| Key | Required | Notes |
-| --- | --- | --- |
-| `type` | yes | `SHOW_HUD_PART` `HIDE_HUD_PART` `CLEAR_HUD_PARTS` `SET_HUD_LAYOUT` |
-| `part` | SHOW / HIDE | `hudpart_*` script (prefix optional) |
-| `layout` | SET_HUD_LAYOUT | `hud_*` script (prefix optional) |
-| `filter` | CLEAR | Optional part id or kind. Alias `part` / `kind` |
-| `duration` | no | Overlay expire. Same resolve as SET_STAT |
-| `session` | no | `true` keeps the overlay until HIDE / CLEAR / SET_HUD_LAYOUT |
-| `target` | no | Who. Overlay ENTITY. Default SELF |
-
-```yaml
-operations:
-    1:
-        type: SET_HUD_LAYOUT
-        layout: hud_example_default
-        target: SELF
-```
-
-```yaml
-operations:
-    1:
-        type: SHOW_HUD_PART
-        part: hudpart_example_stunned_strip
-        duration: 5s
-        target: SELF
-```
-
-Smoke: `mechanic_example_hud`.
-
-```text
-/ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_hud].data_key[data].get[set_default]>
-/ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_hud].data_key[data].get[show_stunned]>
-/ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_hud].data_key[data].get[show_shake]>
-/ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_hud].data_key[data].get[show_blindness]>
-/ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_hud].data_key[data].get[unlock_gate]>
-/ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_hud].data_key[data].get[clear_overlays]>
-```
-
-Harvest: `DrawHUD.dsc` pairing, `HUDStats.dsc` bars and currency pad, `HUDcastinghandling.dsc` BOOLEAN glyphs. Shake and bleed stay PLAY_EFFECT. Do not port actionbarLogic regen into the composer.
+Layouts and parts: [HUD](../hud/README.md).
 
 ### PLACE_SPRAY / OPEN_SPRAY_MENU
 
@@ -1596,7 +1553,7 @@ ModifyEventValue, SpawnMinion, ShowHudElement, ShowTitle, OverwriteCastPress, Ex
 | `REFRESH_MOUNT` | optional `mount` entity, else the live mount | `operation_refresh_mount` → `refresh_mount_entity` |
 | `SET_MOUNT_ROW` | `create` + `entity`, `equipped`, `passenger_policy`, `stat` + `delta`. Create stores profile numbers and does not spawn | `operation_set_mount_row` |
 | `SET_ENTITY_MODEL` | `model` (`entitymodel_` id, bare blueprint id, or inline map with `blueprint` / `scale` / `hitbox` / `remove_previous`) | `operation_set_entity_model` → `apply_entity_model_at_spawn` |
-| `ANIMATE_ENTITY` | `animation` (`entityanimation_` id, bare MEG state, or inline map), optional `li` / `lo` / `speed` / `force` / `delay` / `lock_movement` / `invulnerable_during` | `operation_animate_entity` → `peanimate` |
+| `ANIMATE_ENTITY` | `animation` (`entityanimation_` id, bare MEG state, or inline map), optional `li` / `lo` / `speed` / `force` / `delay` / `lock_movement` / `invulnerable_during` | `operation_animate_entity` → `megstate` |
 | `MYTHIC_PATH` | `path` (Location list) or LOCATION targeting, optional `speed` / `tolerance` / `duration` / `timeoutdistance` / `timeouttime` | `operation_mythic_path` → `mythicpath` |
 | `MYTHIC_SIGNAL` | `signal` (case sensitive), optional `source` (else caster) | `operation_mythic_signal` → `mythicsignal` |
 | `MYTHIC_THREAT` | `action` (`ADD` / `SUBTRACT` / `SET`), `amount`, optional `for` (else caster) | `operation_mythic_threat` → `mythicthreat` |
@@ -1605,7 +1562,7 @@ ModifyEventValue, SpawnMinion, ShowHudElement, ShowTitle, OverwriteCastPress, Ex
 | `RESET_MYTHIC_TARGET` | none. Clears the ActiveMob target only | `operation_reset_mythic_target` |
 | `PLAY_BOSS_MUSIC` | `sound`. Also `entity_.boss_music` at spawn. Pulse uses `entity_boss_music_sound_category`. Death/remove calls `stop_entity_boss_music` (`stop_sound`) | `operation_play_boss_music` |
 
-`entity_.mythic` is a shared base id (`base_land_mob`, …), not a unique Mythic mob per content row. See [entities.md](../entities.md). Boss / hurt clips use `ANIMATE_ENTITY` (`peanimate`), not `mythicskill` or `megstate`.
+`entity_.mythic` is a shared base id (`base_land_mob`, …), not a unique Mythic mob per content row. See [entities.md](../entities.md). Boss / hurt clips use `ANIMATE_ENTITY`, which calls `megstate` on the first active model. Mythic skill bodies stay off the base shell.
 
 Staff smoke (same op tasks, not `/ex`): spawn `entity_example_boar`, stand near it, `/packentity smoke` or `/packentity smoke model|animate|path|signal|threat`. Nametag refresh: `/packentity smoke nametag`. Defaults: `rules.dsc` `entity_smoke_values`.
 

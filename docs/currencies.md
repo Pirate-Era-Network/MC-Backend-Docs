@@ -88,6 +88,8 @@ Shops and travel: `APPLY_TRANSACTION` ([operations.md](mechanics/operations.md))
 
 ## Commands
 
+Writeups: [balance](commands/balance.md), [withdraw and redeem](commands/withdraw.md), [pay](commands/pay.md).
+
 | Command | What it does |
 | --- | --- |
 | `/balance` | Wallet, plus flagged coin value when `withdraw_item` is in inventory |

@@ -24,7 +24,7 @@ Quests are Live. See [quests.md](quests.md). Travel is Live (`waypoint_`, `TRAVE
 | --- | --- |
 | `entity_` | Combat / companion config. Points at a shared Mythic **base** id (`mythic:`), not a per-mob Mythic YAML. Live. A list of these must skip the piece prefixes below, because those names also start with `entity_` |
 | `entityai_` | Targeting, idle movement, cast pattern, reactions, companion block, notify_allies. Live |
-| `entityanimation_` | Model Engine state name for `peanimate` (delay, lock_movement, invulnerable_during). Live |
+| `entityanimation_` | Model Engine state name for `megstate` (delay, lock_movement, invulnerable_during). Live |
 | `entitymodel_` | Model Engine blueprint, scale, hitbox. Live |
 | `entityskill_` | MELEE / CAST / FOLLOW_UP / HURT wrap around a `skillmove_` plus BEFORE/AFTER ops. Live |
 | `entityprofile_` | Stat multiplier template. Live |
@@ -45,7 +45,7 @@ Player-facing menus are Frontend `menu_*` data scripts. Engine: [menus.md](menus
 
 ## HUD
 
-Player-facing HUD layouts are Frontend `hud_*` / `hudpart_*` data scripts. Engine: [hud.md](hud.md). Optional chrome uses `requirements` plus `SHOW_HUD_PART`. Shake and bleed are PLAY_EFFECT, not HUD kinds.
+Player-facing HUD layouts are Frontend `hud_*` / `hudpart_*` data scripts. Engine: [HUD](hud/README.md). Optional chrome uses `requirements` plus `SHOW_HUD_PART`. Shake and bleed are PLAY_EFFECT, not HUD kinds.
 
 ## Daily reset
 
@@ -53,7 +53,7 @@ Player-facing reset rows are Frontend `dailyreset_` data scripts. Engine: [reset
 
 ## Areas, builds, triggerables
 
-`triggerable_` is Live. See [triggers.md](triggers.md). Global Build schema is Live. See [skills.md](skills.md). Gear is items (`EQUIP_GEAR`). Cosmetics are stands (`EQUIP_COSMETIC`). See [cosmetics.md](cosmetics.md). Season pass is Live. See [season-pass.md](season-pass.md). Spray is Live (`PLACE_SPRAY`, `spray_`, `peimagemap`). Titles are Live (`title_`, `OPEN_TITLE_MENU`, `flag_saves.chat_prefix`). See [titles.md](titles.md). Vaults are Live (`OPEN_STORAGE`). See [vaults.md](vaults.md). Trade is Live (`OPEN_TRADE`). See [trades.md](trades.md). HUD is Live (`hud_`, `hudpart_`, `SHOW_HUD_PART`). See [hud.md](hud.md). Daily reset is Live (`dailyreset_`). See [resets.md](resets.md). Chat is Live (`chatrow_`, `chatwords_`, prefix assembler). See [chat.md](chat.md). Areas are Live (`area_`, `areagroup_`, `area_index`, `area_group_index`). See [areas.md](areas.md). Quests are Live (`quest_`, `questcategory_`). See [quests.md](quests.md). Travel is Live (`waypoint_`, `TRAVEL_TO_WAYPOINT`). See [travel.md](travel.md).
+`triggerable_` is Live. See [triggers.md](triggers.md). Global Build schema is Live. See [skills.md](skills.md). Gear is items (`EQUIP_GEAR`). Cosmetics are stands (`EQUIP_COSMETIC`). See [cosmetics.md](cosmetics.md). Season pass is Live. See [season-pass.md](season-pass.md). Spray is Live (`PLACE_SPRAY`, `spray_`, `peimagemap`). Titles are Live (`title_`, `OPEN_TITLE_MENU`, `flag_saves.chat_prefix`). See [titles.md](titles.md). Vaults are Live (`OPEN_STORAGE`). See [vaults.md](vaults.md). Trade is Live (`OPEN_TRADE`). See [trades.md](trades.md). HUD is Live (`hud_`, `hudpart_`, `SHOW_HUD_PART`). See [HUD](hud/README.md). Daily reset is Live (`dailyreset_`). See [resets.md](resets.md). Chat is Live (`chatrow_`, `chatwords_`, prefix assembler). See [chat.md](chat.md). Areas are Live (`area_`, `areagroup_`, `area_index`, `area_group_index`). See [areas.md](areas.md). Quests are Live (`quest_`, `questcategory_`). See [quests.md](quests.md). Travel is Live (`waypoint_`, `TRAVEL_TO_WAYPOINT`). See [travel.md](travel.md).
 
 ## What can go wrong
 

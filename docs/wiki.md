@@ -12,7 +12,8 @@ Harvest: `itemwiki_mainpage.dsc` (`itemwiki_generic_wikimenu`), `itemwiki_helper
 
 | Piece | Path |
 | --- | --- |
-| Prefix lists, opt-out, `/packwiki` | `Wiki/wiki_utils.dsc` |
+| Prefix lists and opt-out | `Wiki/wiki_utils.dsc` |
+| `/packwiki` | `Wiki/wiki_command.dsc`. See [commands/packwiki](commands/packwiki.md) |
 | PAGE itemlist and lore | `Wiki/wiki_lore.dsc` |
 | Reload listed-name and drop-source indexes | `Wiki/wiki_index.dsc` |
 | Ops | `Mechanics/Individual_operations/open_wiki_operation.dsc` |

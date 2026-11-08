@@ -17,7 +17,7 @@ Update `docs/` in the **same change** as the engine or `rules.dsc`. This folder 
 | A new effect-operation | [mechanics/operations.md](mechanics/operations.md) |
 | Mechanic config shape (delay, repeat, requirements) | [mechanics/README.md](mechanics/README.md) |
 | Menu config / prefix | [menus.md](menus.md) |
-| HUD layout / part / prefix | [hud.md](hud.md) |
+| HUD layout / part / prefix | [HUD](hud/README.md) |
 | Daily reset prefix / clocks | [resets.md](resets.md) |
 | Chat prefix rows / word filter | [chat.md](chat.md) |
 | A stat / currency / item / living-entity key | that domain page |

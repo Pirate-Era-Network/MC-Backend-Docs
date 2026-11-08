@@ -49,10 +49,11 @@ Do not document a key as Live unless a `.dsc` reads it.
 - [NPCs and remaining contracts](content-contracts.md)
 - [Triggerables and Eventstats](triggers.md)
 - [Menus](menus.md)
-- [HUD](hud.md)
+- [HUD](hud/README.md)
 - [Daily reset](resets.md)
 - [Areas](areas.md)
 - [Mechanics](mechanics/README.md)
+- [Commands](commands/index.md)
 - [Keeping this wiki honest](maintaining.md)
 
 ## What can go wrong

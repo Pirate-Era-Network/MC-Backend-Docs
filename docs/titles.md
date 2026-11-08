@@ -30,7 +30,7 @@ Paint, crew, rank, extra rows, and the word filter live in [chat.md](chat.md). T
 
 ## Menu
 
-`OPEN_TITLE_MENU` fills `menu_title_equip` PAGE rows. Locked rows have no click. Equip/unequip then reopens the PAGE so you can stack several in one sitting. `/packtitle` opens the same PAGE.
+`OPEN_TITLE_MENU` fills `menu_title_equip` PAGE rows. Locked rows have no click. Equip/unequip then reopens the PAGE so you can stack several in one sitting. `/packtitle` (`Titles/title_command.dsc`) opens the same PAGE. See [commands/packtitle](commands/packtitle.md).
 
 Harvest: `PEfamilynames.dsc` (`peplayer.unlockedfamilynames`, prefix text). Leave `/PEtitle` and hardcoded family strings out of Backend.
 

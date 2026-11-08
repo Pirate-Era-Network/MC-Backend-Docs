@@ -69,8 +69,6 @@ Smoke tests: `pirate-era-core-frontend/Mechanics/mechanic_examples.dsc`.
 /ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_spawn_notable].data_key[data].get[self_zone]>
 /ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_spawn_hologram].data_key[data].get[self_text]>
 /ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_gps].data_key[data].get[self_cursor]>
-/ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_hud].data_key[data].get[set_default]>
-/ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_hud].data_key[data].get[show_stunned]>
 /ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_spray].data_key[data].get[self_place]>
 /ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_cosmetics].data_key[data].get[self_equip]>
 /ex run run_mechanic_test def.mechanic_config:<script[mechanic_example_gear].data_key[data].get[self_equip_ring]>

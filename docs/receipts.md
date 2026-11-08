@@ -17,8 +17,10 @@ This is not player `flag_saves` join/quit persist.
 | FE field names | Backend `rules.dsc` `mongo_config_keys` |
 | Database and collection names | Frontend `global configs/global_mongo_config.dsc` |
 | URI, user, password | `plugins/Denizen/secrets.secret` only |
-| Connect / ping | `Persistence/mongo_utils.dsc`. Start/reload is `mongo_engine_events`, not `global_events` |
-| Insert / find | `Analytics/receipt_store.dsc` (`record_receipt`, `/packreceipt`) |
+| Connect | `Persistence/mongo_utils.dsc`. Start/reload is `mongo_engine_events`, not `global_events` |
+| `/packmongo` | `Persistence/mongo_command.dsc`. See [commands/packmongo](commands/packmongo.md) |
+| Insert / find | `Analytics/receipt_store.dsc` (`record_receipt`) |
+| `/packreceipt` | `Analytics/receipt_command.dsc`. See [commands/packreceipt](commands/packreceipt.md) |
 | TRADE writer | `Trade/trade_session.dsc` `complete_trade_session` |
 | Staff PAGE | Frontend `Menus/menu_receipt_list.dsc`. Overlay `header_text` is `receipt_menu_header` |
 

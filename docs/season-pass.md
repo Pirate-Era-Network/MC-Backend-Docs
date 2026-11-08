@@ -16,7 +16,8 @@ Modern: date window and tracks live on the FE file. `GRANT_SEASON_XP` is the onl
 | --- | --- |
 | Prefix, flag path, YAML keys | [rules.dsc](https://github.com/Pirate-Era-Network/mc-denizen-core-backend/blob/main/rules.dsc) `seasonpass_config`, `flag_saves.season_pass` |
 | Getters and counters | `SeasonPass/season_pass_utils.dsc` |
-| PAGE / SCROLL overlay, `/packseasonpass` | `SeasonPass/season_pass_menu.dsc` |
+| PAGE / SCROLL overlay | `SeasonPass/season_pass_menu.dsc` |
+| `/packseasonpass` | `SeasonPass/season_pass_command.dsc`. See [commands/packseasonpass](commands/packseasonpass.md) |
 | Ops | `Mechanics/Individual_operations/season_pass_operation.dsc` |
 | Smoke season | `pirate-era-core-frontend/SeasonPass/seasonpass_example.dsc` |
 | Next month file | `pirate-era-core-frontend/SeasonPass/seasonpass_example_next.dsc` |

@@ -66,7 +66,7 @@ Place while looking at a block. The frame is an invisible `item_frame` with a `f
 
 ## Staff ping
 
-`/packapi ping` (op or console) calls `GET /health/auth` with `timeout:3s`. Chat is `api ok`, `api is down` (timeout or any non-2xx except 401), or `api unauthorized` (`401`). Reload scripts, then run it from the game server. A browser on the public IP is not this test.
+`/packapi ping` (op or console) lives in `Api/api_command.dsc` and calls `GET /health/auth` with `timeout:3s`. See [commands/packapi](commands/packapi.md). Chat is `api ok`, `api is down` (timeout or any non-2xx except 401), or `api unauthorized` (`401`). Reload scripts, then run it from the game server. A browser on the public IP is not this test.
 
 ## What can go wrong
 

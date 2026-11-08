@@ -17,7 +17,7 @@ general_transcript_english:
 
 Player language flag: `flag_saves.activelanguage` → `runtime_data.language`. Missing flag uses `registry_gamerules.language.default` (`english` on Pirate Era). Get/set: `get_targets_current_language` / `set_targets_current_language`. Look up a line with `get_target_transcript_key`. That proc returns **raw** YAML. Call `.parsed` on the queue that has the defs (`<[amount]>`, `<[owner_name]>`). Do not parse inside the getter.
 
-`/language` cycles registered transcript languages, restamps inventory Item Configs, and reloads an open engine menu.
+`/language` (`utils/language_command.dsc`) cycles registered transcript languages, restamps inventory Item Configs, and reloads an open engine menu. See [commands/language](commands/language.md).
 
 Formats come from `global_format_config` / Frontend `formats/`.
 
