@@ -39,6 +39,10 @@ flowchart LR
 
 Shake and bleed are `PLAY_EFFECT` with `SCREEN_SHAKE` and `BLOODY_SCREEN`. A full-screen frame, such as a blind or a freeze, is a [glyph](kinds/glyph.md) plus [requirements](../mechanics/requirements.md) and [SHOW_HUD_PART](operations/show-hud-part.md).
 
+## Staff
+
+`/packhud` opens a menu of online players. Hover a name to read that player's layout. `/packhud <player>` narrates the layout and does not open the menu. See [packhud](../commands/packhud.md).
+
 ## Tips
 
 - Name a layout `hud_` and a part `hudpart_`. Reload lists scripts by that prefix.

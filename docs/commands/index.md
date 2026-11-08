@@ -40,6 +40,7 @@ Ops, or the console when the page says console works. A linked player who is not
 | `/staticloot` | Bind a loot table to the container you look at | [staticloot](staticloot.md) |
 | `/packhologram` | Place, list, or remove persistent holograms. Needs a player | [packhologram](packhologram.md) |
 | `/packgps` | List or clear GPS arrows, or point one at a waypoint | [packgps](packgps.md) |
+| `/packhud` | List online players and the HUD layout each one is drawing | [packhud](packhud.md) |
 | `/packprojectile` | List or clear tracked shots | [packprojectile](packprojectile.md) |
 | `/packspray` | List or clear spray frames | [packspray](packspray.md) |
 | `/packcosmetic` | List or clear tracked cosmetic displays | [cosmetics](cosmetics.md) |
