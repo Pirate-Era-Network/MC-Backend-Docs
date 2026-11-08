@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Layout
 
-A layout is the arrangement the player is looking at. Write one when that arrangement is reusable, such as the normal combat bar or a smaller bar for a cutscene. A temporary icon on the same bar is a show operation, not a second layout. Minecraft centers the whole bar, so the first slot is the pin (the hotbar letter in this pack). Every later slot is a distance from that pin.
+A layout is the arrangement the player is looking at. The player has one active layout. Another `hud_` script stays off until [SET_HUD_LAYOUT](operations/set-hud-layout.md) replaces it. Both rows are never drawn together. Write one when that arrangement is reusable, such as the normal combat bar or a smaller bar for a cutscene. A temporary icon on the same bar is a show operation, not a second layout. Minecraft centers the whole bar, so the first slot is the pin (the hotbar letter in this pack). Every later slot is a distance from that pin.
 
 A layout script starts with `hud_`. It is `type: data`. The row lives under `data.parts` as `1:`, `2:`, in draw order.
 

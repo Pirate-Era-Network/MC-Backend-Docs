@@ -19,7 +19,7 @@ On a `hudpart_` script the same type means something narrower. The part list onl
 
 Omit both `duration` and `session` and the show lasts one hour.
 
-A part already in the layout is forced on for that time. A part that is not in the layout is drawn after the base row, in `priority` order. Leave that extra on `PAIR`. See [layout](../layout.md).
+A part already in the layout is forced on for that time. A part that is not in the layout is drawn after the base row, in `priority` order. That show is an extra piece on the one active layout. Leave that extra on `PAIR`. See [layout](../layout.md).
 
 ```yaml
 mechanic_show_stunned_text:

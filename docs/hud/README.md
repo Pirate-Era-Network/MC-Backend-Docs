@@ -5,7 +5,7 @@ slug: /hud
 
 # HUD
 
-The HUD is the text bar above the hotbar. A layout is one arrangement of pieces for a way of playing. Combat shows health, stamina, and belly. A quieter layout shows health only. A part is one piece. Appearance is the shared nickname list so a part can say `font: hp` instead of the long pack font id. A skill shows or hides a piece from the same mechanic that plays a sound. The part itself only chooses what a failed requirement does: keep a blank of the same width, or leave the piece out.
+The HUD is the text bar above the hotbar. A layout is one arrangement of pieces for a way of playing. Combat shows health, stamina, and belly. A quieter layout shows health only. The player has one active layout. [SET_HUD_LAYOUT](operations/set-hud-layout.md) replaces it, and both rows are never on the bar together. A part is one piece. Appearance is the shared nickname list so a part can say `font: hp` instead of the long pack font id. A skill shows or hides a piece from the same mechanic that plays a sound. The part itself only chooses what a failed requirement does: keep a blank of the same width, or leave the piece out.
 
 ```mermaid
 flowchart LR
