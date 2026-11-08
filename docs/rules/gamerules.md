@@ -13,5 +13,5 @@ Top-level maps on `registry_gamerules`. Pack policy is [gamerules](../gamerules.
 | `gamerules_language_keys` | `default` | [gamerules.md](../gamerules.md), [language.md](../language.md) |
 | `gamerules_language_keys` | `default` | [gamerules.md](../gamerules.md), [language.md](../language.md) |
 | `gamerules_analytics_keys` | `day_expire` | [gamerules.md](../gamerules.md), [analytics.md](../analytics.md) |
-| `gamerules_hud_keys` | `default` | [gamerules.md](../gamerules.md), [HUD](../hud/README.md) |
+| `gamerules_hud_keys` | `default`, `hide_vanilla_level` | [gamerules.md](../gamerules.md), [HUD](../hud/README.md) |
 | `gamerules_hunger_keys` | `lose` | [gamerules.md](../gamerules.md), [items.md](../items/README.md) |

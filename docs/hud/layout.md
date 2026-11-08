@@ -53,3 +53,4 @@ With no presence op, a failed requirement draws the pad and the slot stays. That
 - The first hotbar letter is `balance: RAW`. `PAIR` on that letter adds a left counter and shifts the whole bar.
 - A tier-2 extra stays `PAIR`. An extra is a part that is not in this `parts` row. A skill shows it with `SHOW_HUD_PART`. `RAW` on that extra has no left counter, so the base bar slides.
 - `SHOW` omit belongs on the last slot, or on an extra that is not in the base row. A middle slot that fails its requirement still draws its pad.
+- Reload rebuilds the layout cache and marks each online player dirty. The next draw uses the new offsets. Temporary show and hide parts stay.
