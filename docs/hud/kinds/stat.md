@@ -12,6 +12,7 @@ A stat part prints a number from a pack stat. `view` chooses the current value, 
 | `stat` | Pack `stat_` to read. |
 | `view` | `CURRENT`, `MAX`, or `BOTH`. `BOTH` is the default and prints `current/max`. |
 | `maxchars` | Width of the text. Shorter numbers are padded out to this length. |
+| `decimals` | How many digits after the dot. `0` is a whole number. `1` turns `19.64` into `19.6`. Omitted means `0`. |
 | `pad` | Character used to fill that width. `Z` is the transparent lock. |
 | `counter` | Left-side twin that cancels the width. `Z` matches the pad. |
 | `color` | Color tag. Quote it. `#` starts a YAML comment when it is bare. |
@@ -26,6 +27,7 @@ hudpart_hp_text:
         stat: stat_player_maximum_health
         view: BOTH
         maxchars: 11
+        decimals: 0
         pad: Z
         counter: Z
         color: "<&color[#992929]>"
@@ -36,4 +38,4 @@ hudpart_hp_text:
 - Quote `color` whenever the value contains `#`.
 - Set `maxchars` to the longest number you will print, including the slash in `BOTH`.
 - `pad` and `counter` stay the same letter so the width does not jump when the number changes.
-- Printed numbers keep one decimal. A stamina pool of `19.64` draws as `19.6`. Effect countdown seconds use that same round.
+- `decimals: 0` hides the fraction. `decimals: 1` keeps one digit. Effect countdown seconds read the same key on that strip.

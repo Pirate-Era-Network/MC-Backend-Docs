@@ -12,6 +12,7 @@ An effect strip is a fixed row of slots you list yourself. Unused slots still dr
 | `strip_mode` | `CHARS` is the icon row. `TIMES` is leftover seconds for each slot. Default is `CHARS`. |
 | `slots` | Numbered map. Each slot can set `on_glyph`, `off_glyph`, and `stat`. |
 | `step` | Space between leftover-time cells. Only `TIMES` reads it. Default is `11`. |
+| `decimals` | Digits after the dot on a `TIMES` countdown. `0` is a whole second. Omitted means `0`. |
 | `counter` | Left-side twin for the whole row. `Z` holds the width. |
 
 ```yaml
