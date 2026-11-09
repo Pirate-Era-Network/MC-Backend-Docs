@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Layout
 
-Write a `hud_` script when a whole row should be reusable, such as the combat bar or a shorter bar for a cutscene. The script is `type: data`. The row lives under `data.parts` as `1:`, `2:`, in draw order. Minecraft centers the whole string, so the first slot is the pin (the hotbar letter in this pack) and every later slot is a distance from that pin. The player stores one layout id. Another `hud_` script stays unused until [SET_HUD_LAYOUT](operations/set-hud-layout.md) replaces that id, and the previous row stops drawing. A temporary icon on the same bar is [SHOW_HUD_PART](operations/show-hud-part.md), which draws an extra piece on that stored row.
+Write a `hud_` script when a whole row should be reusable, such as the combat bar or a shorter bar for a cutscene. The script is `type: data`. The row lives under `data.parts` as `1:`, `2:`, in draw order. Minecraft centers the whole string. The hotbar letter is the pin. Each later slot's `offset` is that part's own left edge, in space pixels from the pin. Moving one slot does not move the slots after it. The player stores one layout id. Another `hud_` script stays unused until [SET_HUD_LAYOUT](operations/set-hud-layout.md) replaces that id, and the previous row stops drawing. A temporary icon on the same bar is [SHOW_HUD_PART](operations/show-hud-part.md), which draws an extra piece on that stored row.
 
 The hotbar letter is the pin, then a health bar sits beside it.
 
@@ -30,7 +30,7 @@ hud_combat:
 | Key | Where | What to write |
 | --- | --- | --- |
 | `part` | Row | `hudpart_` script name. The prefix on the value is optional. |
-| `offset` | Row or part | Distance from the pin, as a negative space count. The row wins when both set it. `0` sits on the pin. |
+| `offset` | Row or part | Left edge of this slot, in space pixels from the pin. `0` sits on the pin. The row wins when both set it. Other slots keep their own offsets. |
 | `balance` | Row or part | `PAIR` is the default. It draws a matching blank on the left so the pin does not drift. `RAW` means this slot is the pin, and only the first hotbar letter uses it. The row wins when both set it. |
 | `enabled` | Row | `false` still draws the off-state for that slot. To force the pad, use [HIDE_HUD_PART](operations/hide-hud-part.md). |
 | `requirements` | Row or part | Numbered map, same shape as a mechanic. The row wins when both set it. Types are on [requirements](../mechanics/requirements.md). |

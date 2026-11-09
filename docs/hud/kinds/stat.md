@@ -36,3 +36,4 @@ hudpart_hp_text:
 - Quote `color` whenever the value contains `#`.
 - Set `maxchars` to the longest number you will print, including the slash in `BOTH`.
 - `pad` and `counter` stay the same letter so the width does not jump when the number changes.
+- Printed numbers keep one decimal. A stamina pool of `19.64` draws as `19.6`. Effect countdown seconds use that same round.

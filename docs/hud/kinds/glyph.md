@@ -31,3 +31,4 @@ A full-screen frame uses `glyph` plus `off_glyph`, then [SHOW_HUD_PART](../opera
 - Copy the letter from that font's character list.
 - `off_glyph` is the width twin. Uppercase `R` cancels lowercase `r` when the frame is off.
 - The first hotbar letter uses `balance: RAW`. Any later glyph stays `PAIR`.
+- Two frames on one slot: `on_glyph` when the requirement passes, `off_glyph` when it fails. Leave off `SHOW_HUD_PART`, or a failed requirement removes the slot instead of drawing the other frame.

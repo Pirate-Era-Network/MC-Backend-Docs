@@ -52,6 +52,8 @@ hud_appearance:
 | `pad_char` | Width lock. `Z` is a transparent letter of the same width, so a number can change without the bar sliding. |
 | `currency_pad` | How many pad letters a hidden [currency](kinds/currency.md) line keeps. |
 | `currency_dividers` | Belly shorthand. `1000` becomes `1k`, then `m`, `b`, and `t` as the amount grows. List the largest amount first. |
+| `char_advances` | Pixel width of one letter in that font, in the same units as `space.N`. The layout cursor uses this so one slot's offset does not drag the next slot. |
+| `glyph_advances` | Per-letter width when letters in one font are different sizes, such as the hotbar icon and the dash icon. |
 
 A [bar](kinds/bar.md) can set its own `bar_alphabet` when that one bar uses different letters. Every other part uses the list here.
 
