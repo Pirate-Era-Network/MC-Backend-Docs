@@ -49,4 +49,4 @@ step: 11
 
 - The slot count is the width. Keep the off letter on every slot you want to reserve.
 - `step` does nothing on `CHARS`. Set it on the `TIMES` row when the countdown cells need a gap.
-- One part is one mode. Use two parts when you want icons and a countdown.
+- One part is one mode. Use two parts when you want icons and a countdown. A [group](group.md) can list both so one pin moves them together.

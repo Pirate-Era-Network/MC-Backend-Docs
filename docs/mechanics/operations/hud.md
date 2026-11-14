@@ -10,5 +10,7 @@ Showing, hiding, clearing, or replacing the action bar is documented with the HU
 - [HIDE_HUD_PART](../../hud/operations/hide-hud-part.md)
 - [CLEAR_HUD_PARTS](../../hud/operations/clear-hud-parts.md)
 - [SET_HUD_LAYOUT](../../hud/operations/set-hud-layout.md)
+- [ADD_HUD_LAYOUT](../../hud/operations/add-hud-layout.md)
+- [REMOVE_HUD_LAYOUT](../../hud/operations/remove-hud-layout.md)
 
 Layouts and parts: [HUD](../../hud/README.md). Shake and bleed are [PLAY_EFFECT](play-effect.md) with `SCREEN_SHAKE` and `BLOODY_SCREEN`.

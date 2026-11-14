@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # SET_HUD_LAYOUT
 
-`SET_HUD_LAYOUT` replaces the layout id stored on the player and keeps that choice. The bar is one string from the new `hud_` row, so the previous layout stops drawing. The change also clears show and hide overlays, including a `session: true` overlay, and the new row starts from the layout script alone. A later `SET_HUD_LAYOUT` replaces this one. The layout name is the script name, and `hud_combat` and `combat` both resolve to the `hud_` script. This op is for mechanics. A `hudpart_` `operations:` list only reads `SHOW_HUD_PART` and `HIDE_HUD_PART`, so a layout change on a part does nothing.
+`SET_HUD_LAYOUT` replaces the one saved base layout id and keeps that choice. The bar is one string. The previous base row stops drawing. The change also clears show and hide overlays, including a `session: true` overlay. Session rows from [ADD_HUD_LAYOUT](add-hud-layout.md) stay. They are not a second saved id. A later `SET_HUD_LAYOUT` replaces this base id. The layout name is the script name, and `hud_combat` and `combat` both resolve to the `hud_` script. This op is for mechanics. A `hudpart_` `operations:` list only reads `SHOW_HUD_PART` and `HIDE_HUD_PART`, so a layout change on a part does nothing.
 
 | Key | What to write |
 | --- | --- |
@@ -28,6 +28,6 @@ mechanic_set_combat_hud:
 ## Tips
 
 - Show and hide overlays from the previous layout end here. Put a new show in a later operation if the new row still needs it.
-- A later `SET_HUD_LAYOUT` replaces this one. Two layouts are never active together.
+- A later `SET_HUD_LAYOUT` replaces this base id. The player keeps one saved layout. Session rows stay until [REMOVE_HUD_LAYOUT](remove-hud-layout.md) or quit.
 - The layout name is the script name. `hud_combat` and `combat` both resolve to the `hud_` script.
 - Swap layouts from a mechanic. The part itself cannot change which row it sits in.

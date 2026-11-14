@@ -12,6 +12,7 @@ A glyph draws one letter from a pack font. The hotbar pin, an outline, and a ful
 | `glyph` | The letter while the part is on. |
 | `on_glyph` | Same job as `glyph`. Use this when you also set an off letter. |
 | `off_glyph` | The letter while the part is off. If you omit it, the off letter is the uppercase twin of the on letter. |
+| `flag` | Optional copy key. A non-empty value draws the on letter. An empty key draws the off letter. Omit it and the glyph does not read the copy map. |
 
 ```yaml
 hudpart_hotbar:
@@ -32,3 +33,4 @@ A full-screen frame uses `glyph` plus `off_glyph`, then [SHOW_HUD_PART](../opera
 - `off_glyph` is the width twin. Uppercase `R` cancels lowercase `r` when the frame is off.
 - The first hotbar letter uses `balance: RAW`. Any later glyph stays `PAIR`.
 - Two frames on one slot: `on_glyph` when the requirement passes, `off_glyph` when it fails. Leave off `SHOW_HUD_PART`, or a failed requirement removes the slot instead of drawing the other frame.
+- `flag` on a glyph is the same copy map as a text line. An empty name draws the off frame and keeps the width.
